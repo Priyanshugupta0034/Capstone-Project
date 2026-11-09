@@ -1,0 +1,734 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171a38;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+    background: #777777;
+}
+
+.main-nav {
+    min-height: 115px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    list-style: none;
+    margin: 0;
+}
+
+.navlist a {
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.navlist a:hover,
+.navlist a.active {
+    color: #ff4d18;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.navbar-toggler {
+    border: 0;
+    color: #172044;
+    font-size: 30px;
+}
+
+.mobile-nav {
+    background: #171a38;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.mobile-nav li {
+    text-align: center;
+}
+
+.mobile-nav a {
+    display: block;
+    color: #fff;
+    padding: 12px;
+}
+
+/* ================= COMMON ================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h6 {
+    color: #f4511e;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.left-heading {
+    text-align: left;
+}
+
+.orange-button {
+    border: 0;
+    background: #ff4d18;
+    color: #fff;
+    padding: 16px 38px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:
+        url("hero-bg.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 15, 35, 0.78);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 6%;
+    color: #fff;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 5vw, 82px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #ff4d18;
+}
+
+.hero-line {
+    width: 115px;
+    height: 8px;
+    border-radius: 10px;
+    background: #fff;
+    margin: 55px 0;
+}
+
+.hero p {
+    max-width: 800px;
+    font-size: 21px;
+    line-height: 1.7;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    background: #fff;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.service-item {
+    width: 270px;
+    min-height: 280px;
+    padding: 35px 25px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+}
+
+.service-item i {
+    display: inline-block;
+    font-size: 48px;
+    color: #48b58a;
+    margin-bottom: 22px;
+}
+
+.service-item h4 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ================= ABOUT TABLE ================= */
+
+.about {
+    background: #fff;
+}
+
+.course-button {
+    margin-top: 35px;
+    border: 0;
+    padding: 14px 25px;
+    border-radius: 8px;
+    background: #ffc107;
+    font-size: 20px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    font-size: 20px;
+}
+
+.course-table th,
+.course-table td {
+    padding: 18px 22px;
+    text-align: left;
+}
+
+.course-table th {
+    background: #cdd2d9;
+    font-weight: 700;
+}
+
+.course-table td {
+    background: #fff;
+}
+
+.course-table tbody tr:nth-child(even) td {
+    background: #cdd2d9;
+}
+
+.course-table td:first-child {
+    color: #4db58b;
+    font-weight: 700;
+}
+
+/* ================= LEARNING PLAN ================= */
+
+.learning-plan {
+    position: relative;
+    min-height: 650px;
+    padding: 80px 0;
+    background:
+        url("learning-bg.jpg") center/cover no-repeat;
+    color: #fff;
+}
+
+.learning-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 13, 32, 0.85);
+}
+
+.learning-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.learning-image {
+    flex: 1;
+}
+
+.learning-image img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.learning-form {
+    flex: 1;
+}
+
+.learning-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.learning-form label {
+    font-size: 20px;
+    margin: 18px 0 8px;
+}
+
+.learning-form input,
+.learning-form select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: rgba(220, 225, 230, 0.8);
+    font-size: 18px;
+    outline: none;
+}
+
+.learning-form .orange-button {
+    width: 210px;
+    margin: 35px auto 0;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+    background: #fff;
+}
+
+.testimonial-card {
+    position: relative;
+    min-height: 390px;
+    margin: 20px 70px;
+    padding: 75px 50px 50px;
+    border-radius: 18px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    background: #ff5a2a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.testimonial-image {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.testimonial-content {
+    max-width: 85%;
+}
+
+.testimonial-content p {
+    color: #666;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.testimonial-content h4 {
+    color: #222;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.testimonial-content span {
+    color: #d87559;
+    font-size: 18px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 55px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ff4d18;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-size: 55%;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #fff;
+}
+
+.map-box {
+    height: 410px;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(190, 195, 198, 0.75), rgba(190, 195, 198, 0.75)),
+        repeating-linear-gradient(
+            30deg,
+            #d8d8d8 0,
+            #d8d8d8 3px,
+            #eeeeee 3px,
+            #eeeeee 45px
+        );
+}
+
+.map-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.map-placeholder i {
+    color: #df3b2c;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.map-placeholder h3 {
+    font-size: 28px;
+}
+
+.map-placeholder p {
+    font-size: 20px;
+}
+
+.map-placeholder span {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.contact-card {
+    flex: 1;
+    background: #fff;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    min-height: 235px;
+}
+
+.contact-card i {
+    color: #4db58b;
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.contact-card h4 {
+    font-size: 25px;
+}
+
+.contact-card p {
+    color: #4db58b;
+    font-size: 19px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.contact-form-wrapper {
+    padding: 100px 0 30px;
+    text-align: center;
+}
+
+.contact-form-wrapper h2 {
+    font-size: 45px;
+    margin-bottom: 45px;
+}
+
+.contact-form {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 0;
+    background: #e5e5e5;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 240px;
+    resize: vertical;
+}
+
+.contact-form .orange-button {
+    margin-top: 30px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #101a35;
+    color: #fff;
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer span {
+    color: #ff4d18;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .main-nav {
+        min-height: 90px;
+        padding: 10px 30px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero-content {
+        padding: 40px 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .learning-container {
+        flex-direction: column;
+    }
+
+    .learning-image,
+    .learning-form {
+        width: 100%;
+    }
+
+    .contact-cards {
+        flex-wrap: wrap;
+    }
+
+    .contact-card {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-line {
+        margin: 35px 0;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .service-item {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .course-table {
+        min-width: 700px;
+        font-size: 16px;
+    }
+
+    .testimonial-card {
+        margin: 20px 10px;
+        padding: 75px 25px 35px;
+    }
+
+    .testimonial-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .testimonial-content {
+        max-width: 100%;
+    }
+
+    .testimonial-content p {
+        font-size: 17px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+    }
+
+    .contact-cards {
+        margin-top: 25px;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-nav {
+        padding: 8px 18px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-line {
+        width: 80px;
+        height: 6px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .learning-plan {
+        padding: 55px 15px;
+    }
+
+    .left-heading h2 {
+        font-size: 35px;
+    }
+
+    .testimonial-card {
+        min-height: 450px;
+    }
+}
